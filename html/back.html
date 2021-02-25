@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../back.css">
+</head>
+
+<body onload="loadbody()">
+
+    <div style="background-color: blueviolet; width: 120px; height: 20px; padding: 40px ;   " onmouseover="mover(this)"
+        onmouseout="muot(this)">M over me!</div>
+    <br>
+    <div style="background-color: blueviolet; width: 120px; height: 20px; padding: 40px ;   " onmousedown="mdown(this)"
+        onmouseup="mup(this)">M over me!</div>
+
+    Name is: <input type="text" id="fname" onchange="myfunction()">
+    <button onclick="this.innerHTML='oops!'">Click me ! </button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut distinctio rerum sed, laboriosam, omnis numquam
+        corrupti, quibusdam nostrum ipsum architecto dolorem magnam iste totam necessitatibus tempore! Quo alias ab
+        eaque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, facilis? Magni consectetur id sequi itaque
+        libero cumque quaerat est numquam ad. Est quaerat minima optio adipisci? Omnis, impedit dolores! Nihil!</p>
+
+    <button id="bt1">try b 1 </button>
+
+
+
+    <script>
+        document.getElementById('bt1').addEventListener("click", function () {
+            alert('event lis');
+        })
+
+        function mdown(obj) {
+            obj.style.backgroundColor = '#ff1253';
+        }
+        function mup(obj) {
+            obj.innerHTML = 'haaaaaaa...////??????';
+        }
+
+        function mover(o) {
+            o.innerHTML = 'Thank you...';
+        }
+        function muot(o) {
+            o.innerHTML = 'M  me!';
+
+        }
+        function loadbody() {
+            // // // // // //   alert('hi babe'); 
+        }
+
+        function myfunction() {
+            var f1 = document.getElementById('fname');
+            f1.value = f1.value.toUpperCase();
+
+
+
+        }
+    </script>
+</body>
+
+</html>
